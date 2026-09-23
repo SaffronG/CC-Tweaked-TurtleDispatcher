@@ -1,0 +1,16 @@
+{"message":"[PegasusDisplaySupervisor] Successfully registered turtle 4 as a worker","time":"Tue Sep 22 21:54:27 2026","source":"4"}
+{"message":"[PegasusDisplaySupervisor] Successfully registered turtle 3 as a worker","time":"Tue Sep 22 21:54:31 2026","source":"3"}
+{"message":"[PegasusDisplaySupervisor] Successfully registered turtle 1 as a worker","time":"Tue Sep 22 21:54:45 2026","source":"1"}
+{"message":"[PegasusDisplaySupervisor] Successfully registered turtle 2 as a worker","time":"Tue Sep 22 21:54:45 2026","source":"2"}
+{"message":"Invalid request: POST /workers missing turtleId","time":"Tue Sep 22 21:54:45 2026","source":"127.0.0.1"}
+{"message":"mining","time":"Tue Sep 22 21:54:45 2026","source":"1"}
+{"message":"refueling","time":"Tue Sep 22 21:54:45 2026","source":"1"}
+{"message":"idle","time":"Tue Sep 22 21:54:45 2026","source":"2"}
+{"message":"Invalid request: POST /status missing turtleId or status","time":"Tue Sep 22 21:54:45 2026","source":"127.0.0.1"}
+{"message":"Lookup for unknown turtle 99","time":"Tue Sep 22 21:54:45 2026","source":"127.0.0.1"}
+{"message":"Invalid request: GET /workers missing turtleId","time":"Tue Sep 22 21:54:45 2026","source":"127.0.0.1"}{"message":"Invalid request: POST /workers missing turtleId","time":"Tue Sep 22 21:56:05 2026","source":"127.0.0.1"}
+{"message":"[PegasusDisplaySupervisor] Successfully registered turtle 1 as a worker","time":"Tue Sep 22 21:56:20 2026","source":"1"}
+{"message":"Invalid request: POST /workers missing turtleId","time":"Tue Sep 22 22:11:23 2026","source":"127.0.0.1"}
+{"message":"Invalid request: POST /workers missing turtleId","time":"Tue Sep 22 22:11:27 2026","source":"127.0.0.1"}
+{"message":"[PegasusDisplaySupervisor] Successfully registered turtle 112378990 as a worker","time":"Tue Sep 22 22:11:34 2026","source":"112378990"}
+{"message":"[PegasusDisplaySupervisor] Successfully registered turtle 338990 as a worker","time":"Tue Sep 22 22:11:40 2026","source":"338990"}
