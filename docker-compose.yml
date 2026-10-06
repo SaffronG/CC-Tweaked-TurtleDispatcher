@@ -1,0 +1,9 @@
+services:
+  crud_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: crud_server
+    ports:
+      - "8081:8080"
+    restart: unless-stopped

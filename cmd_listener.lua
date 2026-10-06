@@ -5,26 +5,32 @@ if #args == 0 then
 end
 
 local tid = args[1]
-local fmtSource = "[Client #"..tid.."]"
-local logging = require('logging')
+local fmtSource = "[Client #" .. tid .. "]"
+local logging = require("logging")
 
-http.websocketAsync(logging.WebServerBaseAddr, { ["turtle_id"] = tid });
+local function log(msg)
+    local ok, err = logging.sendServerLog(tid, msg)
+    if not ok then
+        printError(fmtSource .. " Log POST failed: " .. tostring(err))
+    end
+end
 
-print(fmtSource.." Connection request sent for Turtle "..tid..", Awaiting response.")
+http.websocketAsync(logging.BASE, { ["turtle_id"] = tid })
+print(fmtSource .. " Connection request sent for Turtle " .. tid .. ", awaiting response.")
 
 while true do
-   local event, resUrl, handleOrError = os.pullEvent()
+    local event, resUrl, handleOrError = os.pullEvent()
 
-   if (event == "websocket_success" or event == "websocket_failure") and resUl = url then
-        if event == "websocketAsync" then
+    if (event == "websocket_success" or event == "websocket_failure") and resUrl == logging.BASE then
+        if event == "websocket_success" then
             local ws = handleOrError
-            print(fmtSource.." Connected successfully!")
-
-            
-
-            ws.close();
+            print(fmtSource .. " Connected successfully!")
+            log("Connected")
+            -- ws stays open here; use ws.receive() / ws.send() in your loop
         else
-            logging.sendLog(fmtSource," Connection failed: "..handleOrError)
+            printError(fmtSource .. " Websocket failed: " .. tostring(handleOrError))
+            log("Connection Failed: " .. tostring(handleOrError))
+            return
         end
     end
 end
